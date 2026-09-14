@@ -1,0 +1,95 @@
+{
+  "course": {
+    "title": "AI Agents for Beginners",
+    "eyebrow": "QALAM presents · Microsoft's curriculum, digested",
+    "subtitle": "From agentic frameworks and design patterns to production, security and computer-use agents.",
+    "source_name": "Microsoft (AI Agents for Beginners)",
+    "source_url": "https://github.com/microsoft/ai-agents-for-beginners",
+    "fork_url": "https://github.com/matx104/ai-agents-for-beginners",
+    "credit_line": "Curriculum © Microsoft · MIT License · digested with credit, shared free.",
+    "after_title": "After the course",
+    "after_note": "Continue with the MCP and GenAI petals in this tree, and Microsoft Foundry for the platform layer.",
+    "og_url": "https://matx104.github.io/ai-agents-for-beginners/",
+    "og_image": "img/og.png"
+  },
+  "modules": [
+    {
+      "id": "m1", "num": 1, "title": "Foundations",
+      "blurb": "What an agent is, the frameworks that build them, and the patterns that make them work.",
+      "lessons": [
+        {"id": "1", "title": "Intro to AI agents and agent use cases", "objective": "What agents are and where they earn their keep.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/01-intro-to-ai-agents/README.md",
+         "keys": ["An agent = LLM + tools + memory + a loop that decides", "Workflows are fixed paths; agents choose the path", "Good use cases: fuzzy goals, many tools, verifiable results"]},
+        {"id": "2", "title": "Exploring AI agentic frameworks", "objective": "The framework landscape and what each layer gives you.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/02-explore-agentic-frameworks/README.md",
+         "keys": ["Frameworks differ in abstraction height, not in physics", "Microsoft Agent Framework / LangChain / autogen: loop, tools, state", "Pick the boring one your team can debug at 2am"]},
+        {"id": "3", "title": "Understanding AI agentic design patterns", "objective": "The recurring patterns of agentic systems.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/03-agentic-design-patterns/README.md",
+         "keys": ["Reflection: the agent critiques and revises its own output", "Tool use: the agent acts on the world, not just talks about it", "Planning: decompose the goal before touching a tool"]}
+      ]
+    },
+    {
+      "id": "m2", "num": 2, "title": "The core patterns",
+      "blurb": "Tool use, retrieval, trust — the three muscles every useful agent has.",
+      "lessons": [
+        {"id": "4", "title": "Tool use design pattern", "objective": "Give the agent hands: functions it can call.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/04-tool-use/README.md",
+         "keys": ["A tool is a described function: name, parameters, purpose — the model reads the manual", "Good tool descriptions are prompt engineering for APIs", "Fewer, sharper tools beat a junk drawer of fifty"]},
+        {"id": "5", "title": "Agentic RAG", "objective": "Retrieval when the agent decides what to retrieve.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/05-agentic-rag/README.md",
+         "keys": ["Classic RAG retrieves once; agentic RAG retrieves until satisfied", "The agent can re-query, re-rank, and read tool output before answering", "Grounding turns a confident guess into a sourced claim"]},
+        {"id": "6", "title": "Building trustworthy AI agents", "objective": "Trust and safety in agentic systems.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/06-building-trustworthy-agents/README.md",
+         "keys": ["Trust = correct + safe + auditable — all three, or none", "Human-in-the-loop gates where the stakes are high", "Log every decision: an unauditable agent is an unshippable agent"]}
+      ]
+    },
+    {
+      "id": "m3", "num": 3, "title": "Scaling up",
+      "blurb": "Planning, teams of agents, and agents that know what they know.",
+      "lessons": [
+        {"id": "7", "title": "Planning design pattern", "objective": "Agents that decompose goals into steps.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/07-planning-design/README.md",
+         "keys": ["Plan → execute → replan: the plan is a living artifact", "Explicit plans are debuggable; vibes are not", "Budget the plan: depth and breadth both cost tokens and time"]},
+        {"id": "8", "title": "Multi-agent design pattern", "objective": "Teams: specialization and orchestration.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/08-multi-agent/README.md",
+         "keys": ["One orchestrator, many specialists — conversations, not chaos", "Multi-agent adds power AND failure modes; earn the complexity", "Pass context deliberately: agents can't read each other's minds"]},
+        {"id": "9", "title": "Metacognition design pattern", "objective": "Agents that reason about their own reasoning.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/09-metacognition/README.md",
+         "keys": ["Metacognition: the agent knows what it knows, and says so", "Self-evaluation beats self-confidence — score before you ship", "Uncertainty surfaced early is a feature, not a failure"]}
+      ]
+    },
+    {
+      "id": "m4", "num": 4, "title": "Production and beyond",
+      "blurb": "Real deployments, protocols, context engineering, memory, and the frontier lessons.",
+      "lessons": [
+        {"id": "10", "title": "AI agents in production", "objective": "What changes when the demo ships.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/10-ai-agents-production/README.md",
+         "keys": ["Production adds: auth, rate limits, observability, cost ceilings", "Eval suites are the regression tests of agents", "Ship the narrow agent first; widen it with evidence"]},
+        {"id": "11", "title": "Using agentic protocols — MCP, A2A and NLWeb", "objective": "The protocols agents speak.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/11-agentic-protocols/README.md",
+         "keys": ["MCP connects agents to tools; A2A connects agents to agents", "Protocols turn integrations from N×M into N+M", "NLWeb: the web becomes something agents can query"]},
+        {"id": "12", "title": "Context engineering for AI agents", "objective": "Designing what the model sees.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/12-context-engineering/README.md",
+         "keys": ["Context engineering is prompt engineering grown up: system, tools, memory, retrieved docs — a budget", "The context window is finite and priced: curate ruthlessly", "What you keep out matters as much as what you put in"]},
+        {"id": "13", "title": "Managing agentic memory", "objective": "Memory beyond the window.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/13-agent-memory/README.md",
+         "keys": ["Short-term = the window; long-term = your storage design", "Summarize-and-store: compress history, keep the facts", "Forgetting is a feature — stale memory poisons reasoning"]},
+        {"id": "14", "title": "Exploring Microsoft Agent Framework", "objective": "The framework in depth, hands on.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/14-microsoft-agent-framework/README.md",
+         "keys": ["Agent Framework: agents, workflows, and observability in one kit", "Foundry Agent Service hosts the loop so you host the logic", "The code samples in this fork run on it"]},
+        {"id": "15", "title": "Building computer-use agents (CUA)", "objective": "Agents that drive browsers and desktops.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/15-browser-use/README.md",
+         "keys": ["Computer use: the screen becomes the API — accessibility tree as scaffolding", "CUAs fail visually: screenshot everything, replay everything", "Sandbox them; an agent with a mouse is an agent with power"]},
+        {"id": "16", "title": "Deploying scalable agents", "objective": "Scale from one user to many.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/16-deploying-scalable-agents/README.md",
+         "keys": ["Stateless where possible; state in durable storage where not", "Queue long tasks; stream progress; never block the UI on a model", "Cost scales with users × turns — design the ceiling in"]},
+        {"id": "17", "title": "Creating local AI agents", "objective": "Agents that run on your own machine.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/17-creating-local-ai-agents/README.md",
+         "keys": ["Local models (Foundry Local, Ollama): privacy, latency, no per-token bill", "Local trades capability for sovereignty — pick per workload", "The same agent code, a different endpoint"]},
+        {"id": "18", "title": "Securing AI agents", "objective": "The security chapter — earn it last.", "minutes": 45,
+         "href": "https://github.com/matx104/ai-agents-for-beginners/blob/main/18-securing-ai-agents/README.md",
+         "keys": ["Agent threats: prompt injection, tool abuse, data exfiltration via retrieval", "Least privilege for tools; confirm-before-write by default", "Security-101's CIA triad applies — with prompts as the new perimeter"]}
+      ]
+    }
+  ]
+}
